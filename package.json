@@ -10,6 +10,6 @@
     "url": "https://github.com/Ksyci/Project-Template"
   },
   "dependencies": {
-    "com.unity.nuget.newtonsoft-json": "3.2.1"
+    "com.ksyci.project-template.core": "1.0.0"
   }
 }
