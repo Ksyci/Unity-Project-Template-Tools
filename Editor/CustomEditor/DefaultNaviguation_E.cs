@@ -2,6 +2,8 @@ using UnityEditor;
 
 namespace ProjectTemplate
 {
+    #if UNITY_EDITOR
+
     [CustomEditor(typeof(DefaultNaviguation))]
     public class DefaultNaviguation_E : BasicEditor<DefaultNaviguation>
     {
@@ -100,4 +102,6 @@ namespace ProjectTemplate
 
         #endregion
     }
+
+    #endif
 }

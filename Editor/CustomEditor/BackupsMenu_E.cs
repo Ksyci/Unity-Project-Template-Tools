@@ -2,6 +2,8 @@ using UnityEditor;
 
 namespace ProjectTemplate
 {
+    #if UNITY_EDITOR
+
     [CustomEditor(typeof(BackupsMenu))]
     public class BackupsMenu_E : BasicEditor<BackupsMenu>
     {
@@ -23,4 +25,6 @@ namespace ProjectTemplate
 
         #endregion
     }
+
+    #endif
 }

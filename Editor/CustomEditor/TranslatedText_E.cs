@@ -2,6 +2,8 @@ using UnityEditor;
 
 namespace ProjectTemplate
 {
+    #if UNITY_EDITOR
+
     [CustomEditor(typeof(TranslatedText))]
     public class TranslatedText_E : BasicEditor<TranslatedText>
     {
@@ -63,4 +65,6 @@ namespace ProjectTemplate
 
         #endregion
     }
+
+    #endif
 }

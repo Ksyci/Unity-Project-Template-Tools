@@ -3,6 +3,8 @@ using UnityEditor;
 
 namespace ProjectTemplate
 {
+    #if UNITY_EDITOR
+
     [CustomEditor(typeof(Audio))]
     public class Audio_E : BasicEditor<Audio>
     {
@@ -86,4 +88,6 @@ namespace ProjectTemplate
 
         #endregion
     }
+
+    #endif
 }
