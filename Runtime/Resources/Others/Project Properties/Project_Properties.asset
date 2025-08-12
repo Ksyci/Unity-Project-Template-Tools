@@ -1,0 +1,387 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77bfcdcf44b32d4ea2d46ab24eb819d, type: 3}
+  m_Name: Project_Properties
+  m_EditorClassIdentifier: 
+  _pageIndex: 2
+  _languages:
+  - English
+  - "Fran\xE7ais"
+  _backupsConfiguration:
+    _autoSaveDelay: 900
+    _maxBackup: 50
+    _activeBackupPath: 
+  _persistentObjects:
+  - {fileID: 3844797529087964247, guid: 4b9050fae4702c14d984314fc06f6e4a, type: 3}
+  _gameStates:
+  - _name: Init
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  - _name: Start
+    _event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6117722530502312525, guid: f395bdd6cc4009d40991382e9a4298a4, type: 3}
+          m_TargetAssemblyTypeName: MonoLibrary, Assembly-CSharp
+          m_MethodName: StopAutosave
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: Loading
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  - _name: In Game
+    _event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6117722530502312525, guid: f395bdd6cc4009d40991382e9a4298a4, type: 3}
+          m_TargetAssemblyTypeName: MonoLibrary, Assembly-CSharp
+          m_MethodName: StartAutosave
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6117722530502312525, guid: f395bdd6cc4009d40991382e9a4298a4, type: 3}
+          m_TargetAssemblyTypeName: MonoLibrary, Assembly-CSharp
+          m_MethodName: PauseAutosave
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: Paused
+    _event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6117722530502312525, guid: f395bdd6cc4009d40991382e9a4298a4, type: 3}
+          m_TargetAssemblyTypeName: MonoLibrary, Assembly-CSharp
+          m_MethodName: PauseAutosave
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  _scenes:
+  - _name: In Game
+    _gameStateEnum:
+      _value: In Game
+      _enum:
+      - Init
+      - Start
+      - Loading
+      - In Game
+      - Paused
+    _defaultUi: {fileID: 0}
+    _otherUis:
+    - {fileID: 1985759447326687198, guid: 8d1d82dd6f2751f4b96f060a5d2f83f0, type: 3}
+    - {fileID: 4350879814169748433, guid: cd80400cfc4069f488ec42c7d4fd61a9, type: 3}
+    - {fileID: 6675068682606553712, guid: cd94de562ae0a844684e4d9322494af8, type: 3}
+    - {fileID: 1972198861959805914, guid: 3863605da3de9974099c0aa33eacbad1, type: 3}
+    _controllers:
+    - {fileID: 2446196998433276353, guid: 629e6e9b265e3f544a78ad69ee3e344b, type: 3}
+    _playlists:
+      _isRandomised: 1
+      _soundtracks:
+      - {fileID: 8300000, guid: 81d65e106c31bd445bd92b1fb5a940d1, type: 3}
+      - {fileID: 8300000, guid: 2d601375a6b1f3549acbb6100513d675, type: 3}
+  - _name: Loading
+    _gameStateEnum:
+      _value: Loading
+      _enum:
+      - Init
+      - Start
+      - Loading
+      - In Game
+      - Paused
+    _defaultUi: {fileID: 0}
+    _otherUis:
+    - {fileID: 3133215386352638555, guid: e6756afcbc66ac3418a8d9493c2f5b55, type: 3}
+    _controllers: []
+    _playlists:
+      _isRandomised: 0
+      _soundtracks: []
+  - _name: Main Menu
+    _gameStateEnum:
+      _value: Start
+      _enum:
+      - Init
+      - Start
+      - Loading
+      - In Game
+      - Paused
+    _defaultUi: {fileID: 8940313607588480312, guid: 3e579ff1df8912a47bc8b439a7e5fe19, type: 3}
+    _otherUis:
+    - {fileID: 2317444486766815495, guid: 6229422fab3a2ca4b9e3fda3fde6e628, type: 3}
+    - {fileID: 4350879814169748433, guid: cd80400cfc4069f488ec42c7d4fd61a9, type: 3}
+    - {fileID: 6675068682606553712, guid: cd94de562ae0a844684e4d9322494af8, type: 3}
+    - {fileID: 1972198861959805914, guid: 3863605da3de9974099c0aa33eacbad1, type: 3}
+    _controllers: []
+    _playlists:
+      _isRandomised: 0
+      _soundtracks: []
+  - _name: Splash Screen
+    _gameStateEnum:
+      _value: Init
+      _enum:
+      - Init
+      - Start
+      - Loading
+      - In Game
+      - Paused
+    _defaultUi: {fileID: 0}
+    _otherUis:
+    - {fileID: 1941989381037611064, guid: c3a3b1ceefcc23e4396d2d6132889165, type: 3}
+    _controllers: []
+    _playlists:
+      _isRandomised: 0
+      _soundtracks: []
+  _sceneConfiguration:
+    _hasLoadingScreen: 1
+    _loadingDelay: 1.5
+    _firstSceneIndex: 0
+    _loadingSceneIndex: 1
+  _settingSections:
+  - rid: 6011674659436363789
+  - rid: 6011674659436363793
+  - rid: 6011674659436363797
+  references:
+    version: 2
+    RefIds:
+    - rid: 6011674659436363789
+      type: {class: SettingSection, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _category:
+          _translations:
+          - _language: English
+            _value: Global
+          - _language: "Fran\xE7ais"
+            _value: Globale
+        _settingTemplates:
+        - rid: 6011674659436363790
+    - rid: 6011674659436363790
+      type: {class: SettingTemplate, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _enum:
+          _value: Enum
+          _enum:
+          - Boolean
+          - Enum
+          - Float
+          - Key
+          - String
+          _hasChanged: 0
+        _property:
+          rid: 6011674659436363792
+    - rid: 6011674659436363792
+      type: {class: Enum, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _name:
+          _translations:
+          - _language: English
+            _value: Language
+          - _language: "Fran\xE7ais"
+            _value: Langage
+        _types:
+        - _translations:
+          - _language: English
+            _value: English
+          - _language: "Fran\xE7ais"
+            _value: XXX
+        - _translations:
+          - _language: English
+            _value: XXX
+          - _language: "Fran\xE7ais"
+            _value: "Fran\xE7ais"
+    - rid: 6011674659436363793
+      type: {class: SettingSection, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _category:
+          _translations:
+          - _language: English
+            _value: Volume
+          - _language: "Fran\xE7ais"
+            _value: Volume
+        _settingTemplates:
+        - rid: 6011674659436363794
+    - rid: 6011674659436363794
+      type: {class: SettingTemplate, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _enum:
+          _value: Float
+          _enum:
+          - Boolean
+          - Enum
+          - Float
+          - Key
+          - String
+          _hasChanged: 0
+        _property:
+          rid: 6011674659436363796
+    - rid: 6011674659436363796
+      type: {class: Float, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _name:
+          _translations:
+          - _language: English
+            _value: Music
+          - _language: "Fran\xE7ais"
+            _value: Musique
+        _minAndMax: {x: 0, y: 100}
+        _isDefaultAtMax: 1
+        _isInteger: 1
+    - rid: 6011674659436363797
+      type: {class: SettingSection, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _category:
+          _translations:
+          - _language: English
+            _value: Controls
+          - _language: "Fran\xE7ais"
+            _value: "Contr\xF4les"
+        _settingTemplates:
+        - rid: 6011674659436363798
+        - rid: 6011674659436363801
+        - rid: 6011674659436363804
+        - rid: 6011674659436363807
+    - rid: 6011674659436363798
+      type: {class: SettingTemplate, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _enum:
+          _value: Key
+          _enum:
+          - Boolean
+          - Enum
+          - Float
+          - Key
+          - String
+          _hasChanged: 0
+        _property:
+          rid: 6011674659436363800
+    - rid: 6011674659436363800
+      type: {class: Key, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _name:
+          _translations:
+          - _language: English
+            _value: Move Forward
+          - _language: "Fran\xE7ais"
+            _value: Avancer
+        _defaultBind:
+          _key: 119
+        _validBind:
+        - _key: 119
+        - _key: 273
+    - rid: 6011674659436363801
+      type: {class: SettingTemplate, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _enum:
+          _value: Key
+          _enum:
+          - Boolean
+          - Enum
+          - Float
+          - Key
+          - String
+          _hasChanged: 0
+        _property:
+          rid: 6011674659436363803
+    - rid: 6011674659436363803
+      type: {class: Key, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _name:
+          _translations:
+          - _language: English
+            _value: Move Back
+          - _language: "Fran\xE7ais"
+            _value: s
+        _defaultBind:
+          _key: 115
+        _validBind:
+        - _key: 115
+        - _key: 274
+    - rid: 6011674659436363804
+      type: {class: SettingTemplate, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _enum:
+          _value: Key
+          _enum:
+          - Boolean
+          - Enum
+          - Float
+          - Key
+          - String
+          _hasChanged: 0
+        _property:
+          rid: 6011674659436363806
+    - rid: 6011674659436363806
+      type: {class: Key, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _name:
+          _translations:
+          - _language: English
+            _value: Move Left
+          - _language: "Fran\xE7ais"
+            _value: "Tourner \xE0 Gauche"
+        _defaultBind:
+          _key: 97
+        _validBind:
+        - _key: 97
+        - _key: 276
+    - rid: 6011674659436363807
+      type: {class: SettingTemplate, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _enum:
+          _value: Key
+          _enum:
+          - Boolean
+          - Enum
+          - Float
+          - Key
+          - String
+          _hasChanged: 0
+        _property:
+          rid: 6011674659436363809
+    - rid: 6011674659436363809
+      type: {class: Key, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
+      data:
+        _name:
+          _translations:
+          - _language: English
+            _value: Move Right
+          - _language: "Fran\xE7ais"
+            _value: "Tourner \xE0 Droite"
+        _defaultBind:
+          _key: 100
+        _validBind:
+        - _key: 100
+        - _key: 275
