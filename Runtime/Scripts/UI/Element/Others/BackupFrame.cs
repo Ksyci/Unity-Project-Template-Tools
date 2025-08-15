@@ -38,7 +38,7 @@ namespace ProjectTemplate
 
             _nameText.text = !isNull ? _associatedBackup.Name : string.Empty;
 
-            _dateTimeText.text = !isNull ? Format.ToDate(_associatedBackup.DateTime) : string.Empty;
+            _dateTimeText.text = !isNull ? Format.ToDate(_associatedBackup.Time) : string.Empty;
 
             _backgroundFrame.color = isActiveBackup && isInGame ? LightGrey : Color.white;
         }

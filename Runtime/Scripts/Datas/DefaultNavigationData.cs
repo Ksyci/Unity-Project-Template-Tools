@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using UnityEngine;
 
@@ -7,36 +8,40 @@ namespace ProjectTemplate
     /// Stores position and rotation data for navigation purposes,
     /// allowing serialization of transform information.
     /// </summary>
-    [Serializable]
+    [JsonObject(MemberSerialization.OptIn)]
     public class DefaultNavigationData : Backup.IData
     {
-        #region Serialized
+        #region Variable
 
-        [SerializeField]
+        [JsonProperty]
         private float _xPosition;
 
-        [SerializeField]
+        [JsonProperty]
         private float _yPosition;
 
-        [SerializeField]
+        [JsonProperty]
         private float _zPosition;
 
-        [SerializeField]
+        [JsonProperty]
         private float _pitch;
 
-        [SerializeField]
+        [JsonProperty]
         private float _yaw;
 
         #endregion
 
         #region Properties
 
+        [JsonIgnore]
         public Type Type => typeof(DefaultNavigationData);
 
+        [JsonIgnore]
         public Vector3 Position => new(_xPosition, _yPosition, _zPosition);
 
+        [JsonIgnore]
         public Quaternion Pitch => Quaternion.Euler(Vector3.right * _pitch);
 
+        [JsonIgnore]
         public Quaternion Yaw => Quaternion.Euler(Vector3.up * _yaw);
 
         #endregion
@@ -48,8 +53,9 @@ namespace ProjectTemplate
         /// by copying the local position and rotation from the given <paramref name="transform"/>.
         /// </summary>
         /// <param name="transform">The Transform from which to copy position and rotation data.</param>
-        public DefaultNavigationData(Transform transform) => Set(transform);
-
+        [JsonConstructor]
+        public DefaultNavigationData(Transform transform) 
+            => Set(transform);
 
         /// <summary>
         /// Initializes a new instance of <see cref="DefaultNavigationData"/>
@@ -72,12 +78,15 @@ namespace ProjectTemplate
         /// <param name="transform">The <see cref="Transform"/>from where to set the values.</param>
         public void Set(Transform transform)
         {
-            _xPosition = transform.localPosition.x;
-            _yPosition = transform.localPosition.y;
-            _zPosition = transform.localPosition.z;
+            if(transform != null)
+            {
+                _xPosition = transform.localPosition.x;
+                _yPosition = transform.localPosition.y;
+                _zPosition = transform.localPosition.z;
 
-            _pitch = transform.localEulerAngles.x;
-            _yaw = transform.localEulerAngles.y;
+                _pitch = transform.localEulerAngles.x;
+                _yaw = transform.localEulerAngles.y;
+            }
         }
 
         /// <summary>
