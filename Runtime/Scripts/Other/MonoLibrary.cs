@@ -19,7 +19,7 @@ namespace ProjectTemplate
             {
                 GameScene currentScene = ScenesManager.Instance.CurrentScene;
 
-                string uiName = currentScene.DefaultUi != null ? currentScene.DefaultUi.GetType().Name : null;
+                string uiName = currentScene?.DefaultUi != null ? currentScene.DefaultUi.GetType().Name : null;
 
                 UIsManager.Instance.Replace(uiName);
 
