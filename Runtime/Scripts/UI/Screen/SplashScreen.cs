@@ -24,7 +24,7 @@ namespace ProjectTemplate
 
             try
             {
-                GameScene scene = EnumLib.ScenesMapping[EnumLib.Scene.MAIN_MENU];
+                GameScene scene = EnumLibrary.ScenesMapping[EnumLibrary.Scene.MAIN_MENU];
 
                 ScenesManager.Instance.LoadScene(scene.Name);
 
@@ -33,7 +33,7 @@ namespace ProjectTemplate
             {
                 try
                 {
-                    throw new Error.SceneNotFoundException(EnumLib.Scene.MAIN_MENU.ToString());
+                    throw new Error.SceneNotFoundException(EnumLibrary.Scene.MAIN_MENU.ToString());
                 }
                 catch (Exception e)
                 {

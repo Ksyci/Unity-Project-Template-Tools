@@ -24,7 +24,7 @@ namespace ProjectTemplate
 
 
             bool isActiveBackup = _associatedBackup == BackupsManager.Instance.ActiveBackup;
-            bool isInGame = GameManager.Instance.CurrentState == EnumLib.State.PAUSED;
+            bool isInGame = GameManager.Instance.CurrentState == EnumLibrary.StatesMapping[EnumLibrary.State.PAUSED];
             bool isNull = _associatedBackup == null;
             bool isOtherBackup = !isNull && !isActiveBackup;
 

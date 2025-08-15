@@ -15,7 +15,7 @@ namespace ProjectTemplate
         /// </summary>
         public void ChangePauseState()
         {
-            if (GameManager.Instance.CurrentState == EnumLib.State.PAUSED)
+            if (GameManager.Instance.CurrentState == EnumLibrary.StatesMapping[EnumLibrary.State.PAUSED])
             {
                 GameScene currentScene = ScenesManager.Instance.CurrentScene;
 
@@ -23,13 +23,13 @@ namespace ProjectTemplate
 
                 UIsManager.Instance.Replace(uiName);
 
-                GameManager.Instance.ChangeGameState(EnumLib.State.IN_GAME);
+                GameManager.Instance.ChangeGameState(EnumLibrary.StatesMapping[EnumLibrary.State.IN_GAME]);
             }
             else
             {
                 UIsManager.Instance.Add(nameof(PauseMenu), false);
 
-                GameManager.Instance.ChangeGameState(EnumLib.State.PAUSED);
+                GameManager.Instance.ChangeGameState(EnumLibrary.StatesMapping[EnumLibrary.State.PAUSED]);
             }
         }
 
