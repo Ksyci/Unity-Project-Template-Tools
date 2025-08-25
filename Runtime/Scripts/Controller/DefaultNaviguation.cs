@@ -69,7 +69,7 @@ namespace ProjectTemplate
 
         private partial void SetTransform()
         {
-            if (DatasManager.Instance.TryFindData(out _data))
+            if (BackupsManager.Instance.ActiveBackup.TryGetData(out _data))
             {
                 transform.localPosition = _data.Position;
                 _pitch.localRotation = _data.Pitch;
@@ -77,7 +77,7 @@ namespace ProjectTemplate
             }
             else
             {
-                DatasManager.Instance.AddData(_data = new(transform));
+                BackupsManager.Instance.ActiveBackup.AddData(_data = new(transform));
             }
         }
 

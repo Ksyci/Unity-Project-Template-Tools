@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace ProjectTemplate
@@ -59,7 +58,11 @@ namespace ProjectTemplate
 
         private int _associatedBackupIndex;
 
-        private Backup _associatedBackup;
+        #endregion
+
+        private Backup AssociatedBackup => BackupsManager.Instance[_associatedBackupIndex];
+
+        #region Properties
 
         #endregion
 

@@ -20,25 +20,23 @@ namespace ProjectTemplate
         public void UpdateDisplay(int index)
         {
             _associatedBackupIndex = index;
-            _associatedBackup = BackupsManager.Instance[index];
 
-
-            bool isActiveBackup = _associatedBackup == BackupsManager.Instance.ActiveBackup;
+            bool isActiveBackup = AssociatedBackup == BackupsManager.Instance.ActiveBackup;
             bool isInGame = GameManager.Instance.CurrentState == EnumLibrary.StatesMapping[EnumLibrary.State.PAUSED];
-            bool isNull = _associatedBackup == null;
+            bool isNull = AssociatedBackup == null;
             bool isOtherBackup = !isNull && !isActiveBackup;
 
             _saveButton.interactable = isInGame && !isOtherBackup;
             _loadButton.interactable = !isInGame && !isNull;
             _deleteButton.interactable = !isInGame && !isNull;
 
-            _screenshot.sprite = BackupsManager.LoadScreenshot(_associatedBackup);
+            _screenshot.sprite = BackupsManager.LoadScreenshot(AssociatedBackup);
             _screenshot.color = _screenshot.sprite != null ? Color.white : default;
             _screenshotState.gameObject.SetActive(_screenshot.sprite == null);
 
-            _nameText.text = !isNull ? _associatedBackup.Name : string.Empty;
+            _nameText.text = !isNull ? AssociatedBackup.Name : string.Empty;
 
-            _dateTimeText.text = !isNull ? Format.ToDate(_associatedBackup.Time) : string.Empty;
+            _dateTimeText.text = !isNull ? Format.ToDate(AssociatedBackup.Time) : string.Empty;
 
             _backgroundFrame.color = isActiveBackup && isInGame ? LightGrey : Color.white;
         }
@@ -49,9 +47,9 @@ namespace ProjectTemplate
 
         private partial void Save()
         {
-            if (_associatedBackup != null)
+            if (AssociatedBackup != null)
             {
-                BackupsManager.Instance.Save(_associatedBackup);
+                BackupsManager.Instance.Save(AssociatedBackup);
             }
             else
             {
@@ -60,7 +58,7 @@ namespace ProjectTemplate
         }
 
         private partial void Load()
-            => BackupsManager.Instance.Load(_associatedBackup);
+            => BackupsManager.Instance.Load(AssociatedBackup);
 
         private partial void Delete()
         {
@@ -69,7 +67,7 @@ namespace ProjectTemplate
 
             void action()
             {
-                BackupsManager.Instance.Delete(_associatedBackup);
+                BackupsManager.Instance.Delete(AssociatedBackup);
 
                 BackupsManager.Instance.OnBackupChanged?.Invoke();
             }
