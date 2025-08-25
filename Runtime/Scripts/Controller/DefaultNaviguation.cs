@@ -29,7 +29,7 @@ namespace ProjectTemplate
             {
                 Move();
                 Rotate();
-                _data.Set(transform);
+                _data.Generate();
             }
         }
 

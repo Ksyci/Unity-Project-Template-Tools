@@ -1,5 +1,4 @@
 using Newtonsoft.Json;
-using System;
 using UnityEngine;
 
 namespace ProjectTemplate
@@ -28,12 +27,12 @@ namespace ProjectTemplate
         [JsonProperty]
         private float _yaw;
 
+        [JsonIgnore]
+        private Transform _transform;
+
         #endregion
 
         #region Properties
-
-        [JsonIgnore]
-        public Type Type => typeof(DefaultNavigationData);
 
         [JsonIgnore]
         public Vector3 Position => new(_xPosition, _yPosition, _zPosition);
@@ -54,46 +53,46 @@ namespace ProjectTemplate
         /// </summary>
         /// <param name="transform">The Transform from which to copy position and rotation data.</param>
         [JsonConstructor]
-        public DefaultNavigationData(Transform transform) 
-            => Set(transform);
-
-        /// <summary>
-        /// Initializes a new instance of <see cref="DefaultNavigationData"/>
-        /// by copying position and rotation data from another instance.
-        /// </summary>
-        /// <param name="data">The instance to copy data from.</param>
-        public DefaultNavigationData(DefaultNavigationData data)
+        public DefaultNavigationData(Transform transform)
         {
-            _xPosition = data._xPosition;
-            _yPosition = data._yPosition;
-            _zPosition = data._zPosition;
-
-            _pitch = data._pitch;
-            _yaw = data._yaw;
-        }
-
-        /// <summary>
-        /// Set the position and the rotation of the data with a <see cref="Transform"/>.
-        /// </summary>
-        /// <param name="transform">The <see cref="Transform"/>from where to set the values.</param>
-        public void Set(Transform transform)
-        {
-            if(transform != null)
-            {
-                _xPosition = transform.localPosition.x;
-                _yPosition = transform.localPosition.y;
-                _zPosition = transform.localPosition.z;
-
-                _pitch = transform.localEulerAngles.x;
-                _yaw = transform.localEulerAngles.y;
-            }
+            _transform = transform;
+            Generate();
         }
 
         /// <summary>
         /// Creates a deep copy of this DefaultNavigationData instance.
         /// </summary>
         /// <returns>A new instance of DefaultNavigationData with copied data.</returns>
-        public object Clone() => new DefaultNavigationData(this);
+        public object Clone()
+        {
+            DefaultNavigationData data = new(_transform)
+            {
+                _xPosition = _xPosition,
+                _yPosition = _yPosition,
+                _zPosition = _zPosition,
+
+                _pitch = _pitch,
+                _yaw = _yaw
+            };
+
+            return data;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Generate()
+        {
+            if (_transform != null)
+            {
+                _xPosition = _transform.localPosition.x;
+                _yPosition = _transform.localPosition.y;
+                _zPosition = _transform.localPosition.z;
+
+                _pitch = _transform.localEulerAngles.x;
+                _yaw = _transform.localEulerAngles.y;
+            }
+        }
 
         #endregion
     }
