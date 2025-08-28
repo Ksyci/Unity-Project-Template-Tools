@@ -11,6 +11,8 @@ namespace ProjectTemplate
 
         private const float MAX_ANGLE = 360.0f;
         private const float MAX_PITCH_ANGLE = 80.0f;
+        private const float MAX_SENSITIVITY = 2.5f;
+        private const float MAX_VELOCITY = 5.0f;
 
         public const string PAUSE_EVENT_NAME = "Pause";
         public const string FORMWARD_EVENT_NAME = "Move Forward";
@@ -39,10 +41,10 @@ namespace ProjectTemplate
 
         #region Serialized
 
-        [SerializeField]
+        [SerializeField, Range(1.0f, MAX_VELOCITY)]
         private float _velocity;
 
-        [SerializeField]
+        [SerializeField, Range(1.0f, MAX_SENSITIVITY)]
         private float _sensitivity;
 
         [SerializeField]

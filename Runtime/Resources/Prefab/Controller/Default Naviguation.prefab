@@ -108,140 +108,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _events:
-  - rid: 6011674659436363810
-  - rid: 6011674659436363811
-  - rid: 6011674659436363812
-  - rid: 6011674659436363813
-  - rid: 6011674659436363814
+  - _name: Pause
+    _isOnlyOnKeyDown: 1
+    _bind:
+      _key: 27
+    _onKey:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2446196998433276353}
+          m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
+          m_MethodName: ChangeLockState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6117722530502312525, guid: f395bdd6cc4009d40991382e9a4298a4, type: 3}
+          m_TargetAssemblyTypeName: ProjectTemplate.MonoLibrary, com.ksyci.project-template.tools.runtime
+          m_MethodName: ChangePauseState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: Move Forward
+    _isOnlyOnKeyDown: 0
+    _bind:
+      _key: 119
+    _onKey:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2446196998433276353}
+          m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
+          m_MethodName: ChangeDirection
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: Move Back
+    _isOnlyOnKeyDown: 0
+    _bind:
+      _key: 115
+    _onKey:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2446196998433276353}
+          m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
+          m_MethodName: ChangeDirection
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: Move Left
+    _isOnlyOnKeyDown: 0
+    _bind:
+      _key: 97
+    _onKey:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2446196998433276353}
+          m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
+          m_MethodName: ChangeDirection
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: Move Right
+    _isOnlyOnKeyDown: 0
+    _bind:
+      _key: 100
+    _onKey:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2446196998433276353}
+          m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
+          m_MethodName: ChangeDirection
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   _velocity: 5
   _sensitivity: 2.5
   _pitch: {fileID: 6309396271700986178}
   _yaw: {fileID: 1052567486072062789}
-  references:
-    version: 2
-    RefIds:
-    - rid: 6011674659436363810
-      type: {class: KeyEvent, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
-      data:
-        _name: Pause
-        _isOnlyOnKeyDown: 1
-        _bind:
-          _key: 27
-        _onKey:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2446196998433276353}
-              m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
-              m_MethodName: ChangeLockState
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-            - m_Target: {fileID: 6117722530502312525, guid: f395bdd6cc4009d40991382e9a4298a4, type: 3}
-              m_TargetAssemblyTypeName: ProjectTemplate.MonoLibrary, com.ksyci.project-template.tools.runtime
-              m_MethodName: ChangePauseState
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-    - rid: 6011674659436363811
-      type: {class: KeyEvent, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
-      data:
-        _name: Move Forward
-        _isOnlyOnKeyDown: 0
-        _bind:
-          _key: 119
-        _onKey:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2446196998433276353}
-              m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
-              m_MethodName: ChangeDirection
-              m_Mode: 3
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-    - rid: 6011674659436363812
-      type: {class: KeyEvent, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
-      data:
-        _name: Move Back
-        _isOnlyOnKeyDown: 0
-        _bind:
-          _key: 115
-        _onKey:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2446196998433276353}
-              m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
-              m_MethodName: ChangeDirection
-              m_Mode: 3
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 1
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-    - rid: 6011674659436363813
-      type: {class: KeyEvent, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
-      data:
-        _name: Move Left
-        _isOnlyOnKeyDown: 0
-        _bind:
-          _key: 97
-        _onKey:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2446196998433276353}
-              m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
-              m_MethodName: ChangeDirection
-              m_Mode: 3
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 2
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-    - rid: 6011674659436363814
-      type: {class: KeyEvent, ns: ProjectTemplate, asm: com.ksyci.project-template.core.runtime}
-      data:
-        _name: Move Right
-        _isOnlyOnKeyDown: 0
-        _bind:
-          _key: 100
-        _onKey:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2446196998433276353}
-              m_TargetAssemblyTypeName: ProjectTemplate.DefaultNaviguation, com.ksyci.project-template.tools.runtime
-              m_MethodName: ChangeDirection
-              m_Mode: 3
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 3
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
 --- !u!1 &4728968820894504495
 GameObject:
   m_ObjectHideFlags: 0
